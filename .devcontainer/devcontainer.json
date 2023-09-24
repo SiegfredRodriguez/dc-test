@@ -3,9 +3,14 @@
 
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
-      "version": "17",
-      "jdkDistro": "amzn",
+      "jdkDistro": "amzn"
     },
+    "ghcr.io/devcontainers/features/aws-cli:1": {}
   },
-  "postCreateCommand" : "./gradlew build"
+  "customizations": {
+    "vscode": {
+      "extensions": ["vscjava.vscode-gradle", "esbenp.prettier-vscode"]
+    }
+  },
+  "postCreateCommand": "./gradlew build"
 }
